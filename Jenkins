@@ -1,0 +1,19 @@
+node('master')
+ {
+         stage('CD-S1-GIT')
+        {
+         git 'https://github.com/bodapatisony/BATCH44WAR-File.git'
+        }
+}
+
+
+node('master')
+{
+   
+      stage('S2-MVN-GIT-CB')
+     {
+   
+      sh 'mvn package'
+
+     }
+}
