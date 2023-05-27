@@ -1,6 +1,6 @@
 node('master')
  {
-         stage('CD-S1-GIT')
+         stage('CD-S1-GIT-multipipeline')
         {
          git 'https://github.com/bodapatisony/BATCH44WAR-File.git'
         }
@@ -10,10 +10,10 @@ node('master')
 node('master')
 {
    
-      stage('S2-MVN-GIT-CB')
+      stage('S2-MVN-GIT-CB-multipipeline')
      {
    
       sh 'mvn package'
 
-     }
+    }
 }
